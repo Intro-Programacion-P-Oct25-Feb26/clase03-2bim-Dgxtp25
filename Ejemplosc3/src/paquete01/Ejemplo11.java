@@ -46,7 +46,7 @@ public class Ejemplo11 {
         
         for (int fila = 0; fila < sumaArreglo.length; fila++) {
             for (int col = 0; col < sumaArreglo[fila].length; col++) {
-                System.out.printf("%d\t", sumaArreglo[fila][col]);
+                System.out.printf("%d\n", sumaArreglo[fila][col]);
             }
             System.out.println("");
         }
