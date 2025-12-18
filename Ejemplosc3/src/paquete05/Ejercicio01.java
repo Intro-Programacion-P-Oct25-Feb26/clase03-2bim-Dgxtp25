@@ -18,32 +18,30 @@ public class Ejercicio01 {
         String[] nombresEncargados = new String[5];
         double[][] produccion = new double[5][12];
         double[] totalProduccion = new double[5];
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++) {//Estaciones
             System.out.println("Ingrese nombre de la estacion" + (i + 1) + ":");
             nombresEstacion[i] = entrada.nextLine();
             System.out.println("Ingrese nombre del encargado de la estacion"
                     + (i + 1) + ":");
             nombresEncargados[i] = entrada.nextLine();
-            for (int j = 0; j < 12; j++) {
+            for (int j = 0; j < 12; j++) {//Meses
                 System.out.println("Produccion del mes" + (j + 1) + ":");
                 produccion[i][j] = entrada.nextDouble();
-                totalProduccion[i] += produccion[i][j];
+                totalProduccion[i] += produccion[i][j];//+ Produccion
             }
-            entrada.nextLine(); // limpiar buffer
+            entrada.nextLine();
         }
 
-        // Buscar estación más productiva
-        double mayorProduccion = totalProduccion[0];
+        double mayorProduccion = totalProduccion[0];//
         int posicionMayor = 0;
 
         for (int i = 1; i < 5; i++) {
-            if (totalProduccion[i] > mayorProduccion) {
+            if (totalProduccion[i] > mayorProduccion) {//
                 mayorProduccion = totalProduccion[i];
                 posicionMayor = i;
             }
         }
 
-        // Reporte
         System.out.println("\nAnálisis de Producción\n");
         System.out.println("Estación\n");
 
